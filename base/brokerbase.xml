@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<brokoer_base>
+    <broker name="Resmi">
+        <client nick_ts="RG007" type="fis">
+            <fio data="Манаенко Александр Анатольевич"/>
+            <sn data="D2E782DEAD8F6FD907DD8D38DBDE48DEBE92798997654C04CCE5A7775D6D7EBE"/>
+            <id_number data="031029593"/>
+            <id_date data="02.02.2011"/>
+            <id_made_by_who data="МВД РК"/>
+        </client>
+        <client nick_ts="RG013" type="fis">
+            <fio data="Иосилевич Александр Анатольевич"/>
+            <sn data="83C8ECB7E084085D8D66174812F767B32F31D05A818C3BFD399E0BF3CA020BC7"/>
+            <id_number data="014957403"/>
+            <id_date data="07.10.2013"/>
+            <id_made_by_who data="МВД РК"/>
+        </client>
+        <client nick_ts="RG032" type="fis">
+            <fio data="Литвинов Олег Сергеевич"/>
+            <sn data="7D8C0EB29DC9331A799B91CC8D6D5A6AC4D2D75E66CD937E7D6E27D546A1AB6E"/>
+            <id_number data="022428948"/>
+            <id_date data="06.06.2008"/>
+            <id_made_by_who data="МЮ РК"/>
+        </client>
+        <client nick_ts="RG033" type="fis">
+            <fio data="Беккали Кайыргали Тажигалиулы"/>
+            <sn data="8C0980B5A655FA4084FBA1710997B42C2BBF5EB427EC87E0F8120224A01CC33A"/>
+            <id_number data="013014134"/>
+            <id_date data="08.12.2003"/>
+            <id_made_by_who data="МВД РК"/>
+        </client>
+        <client nick_ts="RG034" type="fis">
+            <fio data="Ковалев Юрий Александрович"/>
+             <sn data="none"/>
+            <id_number data="014238085"/>
+            <id_date data="02.06.2013"/>
+            <id_made_by_who data="МЮ РК"/>
+        </client>
+        <client nick_ts="RG035" type="fis">
+            <fio data="Викс Александр Алифтинович"/>
+            <sn data="4179458ADD6621674E6A0D97DD22BCE6118735068D1E8F959198E5A98A587571"/>
+            <id_number data="012872194"/>
+            <id_date data="03.06.2002"/>
+            <id_made_by_who data="МЮ РК"/>
+        </client>
+        <client nick_ts="RG036" type="fis">
+            <fio data="Шрайнер Александр Александрович"/>
+            <sn data="1E42628996FD3B59F28AFF895A68A22604074ECA11F911DB34A6E9141ADDEEF7"/>
+            <id_number data="019006618"/>
+            <id_date data="03.04.2006"/>
+            <id_made_by_who data="МВД РК"/>
+        </client>
+        <client nick_ts="RG037" type="fis">
+            <fio data="Досмагамбетов Дастан Кылышбаевич"/>
+            <sn data="none"/>
+            <id_number data="021658843"/>
+            <id_date data="21.01.2008"/>
+            <id_made_by_who data="МЮ РК"/>
+        </client>
+        <client nick_ts="RG038" type="fis">
+            <fio data="Арман Леписпаев Жанатпекович"/>
+            <sn data="74D5C2C00EC77646843C45842D793873B941EF39B6D3ADA570472C164E41F855"/>
+            <id_number data="088771966"/>
+            <id_date data="28.05.1998"/>
+            <id_made_by_who data="МВД РК"/>
+        </client>
+        <client nick_ts="RG039" type="fis">
+            <fio data="Тихонов Максим Александрович"/>
+            <sn data="2021E4C3BD3B93929A74D250E1AD2C905AB6F3240168ED3454D209588266F925"/>
+            <id_number data="019069380"/>
+            <id_date data="22.02.2006"/>
+            <id_made_by_who data="МЮ РК"/>
+        </client>
+        <client nick_ts="RG040" type="fis">
+            <fio data="РАҚЫМЖАНОВА ӘЛИЯ ХАМИТҚЫЗЫ"/>
+            <sn data="B22116674E8356BFD2A8A8E16466394D8649268210243F298E2089BA81731F35"/>
+            <id_number data="031459964"/>
+            <id_date data="27.04.2011"/>
+            <id_made_by_who data="МЮ РК"/>
+        </client>
+        <client nick_ts="RG041" type="fis">
+            <fio data="Игликов Артем Владимирович"/>
+            <sn data="A7CA6C848BA7DBE1B631C82EB068DED37B33B8B7ED38FD674C2DAB5577D4AA2F"/>
+            <id_number data="031256989"/>
+            <id_date data="18.03.2011"/>
+            <id_made_by_who data="МВД РК"/>
+        </client>
+        <client nick_ts="RG042" type="fis">
+            <fio data="Шокенов Бектемир Кубанычбекович"/>
+            <sn data="E7A3F1BF6FB26A549370C1C9AC5ED94F4D220F183AC49410577F972C9A506E2A"/>
+            <id_number data="032705124"/>
+            <id_date data="30.12.2011"/>
+            <id_made_by_who data="МВД РК"/>
+        </client>
+        <client nick_ts="RG043" type="fis">
+            <fio data="Нуркасымов Дарын Серикбосынович"/>
+            <sn data="A1511CD0243F11A4B77440A128782E117D3124C6AA87CFBD0B9A8EF902F75CF0"/>
+            <id_number data="036790597"/>
+            <id_date data="30.09.2014"/>
+            <id_made_by_who data="МВД РК"/>
+        </client>
+        <client nick_ts="RG044" type="fis">
+            <fio data="Волков Константин Константинович"/>
+            <sn data="D83277239DBB0FCEEC5B050A35E0088BC6B509792080F2B8153272ABEF0197E3"/>
+            <id_number data="023341037"/>
+            <id_date data="10.03.2009"/>
+            <id_made_by_who data="МЮ РК"/>
+        </client>   
+    </broker>
+</brokoer_base>
