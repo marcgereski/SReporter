@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Centras" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8c173868-da9f-4c97-b384-57d35e2b7705">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="464"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="centeredText" hAlign="Center" vAlign="Middle"/>
+	<style name="normal" isDefault="true" vAlign="Middle" fontName="Arial" fontSize="11" isBold="false" pdfFontName="forms/fonts/arial.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+	<style name="bold" fontSize="12" pdfFontName="forms/fonts/arialbd.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+	<style name="italic" fontSize="12" pdfFontName="forms/fonts/ariali.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+	<style name="middle-bold" fontSize="14" pdfFontName="forms/fonts/arialbd.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+	<style name="centered" isDefault="true" style="centeredText" vAlign="Middle" fontName="Arial" fontSize="12" isBold="false" pdfFontName="forms/fonts/arial.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+	<subDataset name="dataset1" uuid="5bba9875-e297-425b-a746-6ab02802b054">
+		<parameter name="fio_p" class="java.lang.String"/>
+		<parameter name="id_p" class="java.lang.String"/>
+		<parameter name="date_id_p" class="java.lang.String"/>
+		<parameter name="who_made_id_p" class="java.lang.String"/>
+		<parameter name="firma_p" class="java.lang.String"/>
+		<parameter name="emitent_p" class="java.lang.String"/>
+		<parameter name="gos_reg_p" class="java.lang.String"/>
+		<parameter name="account_p" class="java.lang.String"/>
+		<parameter name="cod_ts_p" class="java.lang.String"/>
+		<parameter name="order_type_p" class="java.lang.String"/>
+		<parameter name="direction_p" class="java.lang.String"/>
+		<parameter name="direction_2_p" class="java.lang.String"/>
+		<parameter name="nin_p" class="java.lang.String"/>
+		<parameter name="qty_p" class="java.lang.String"/>
+		<parameter name="price_p" class="java.lang.String"/>
+		<parameter name="volume_p" class="java.lang.String"/>
+		<parameter name="instr_type" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="month" class="java.lang.String"/>
+	<parameter name="year" class="java.lang.String"/>
+	<parameter name="direction" class="java.lang.String"/>
+	<parameter name="fio" class="java.lang.String"/>
+	<parameter name="id_number" class="java.lang.String"/>
+	<parameter name="id_date" class="java.lang.String"/>
+	<parameter name="id_made_by_who" class="java.lang.String"/>
+	<parameter name="firm_name" class="java.lang.String"/>
+	<parameter name="gost_registration" class="java.lang.String"/>
+	<parameter name="account" class="java.lang.String"/>
+	<parameter name="nick_ts" class="java.lang.String"/>
+	<parameter name="order_type" class="java.lang.String"/>
+	<parameter name="direction_2" class="java.lang.String"/>
+	<parameter name="emitent" class="java.lang.String"/>
+	<parameter name="instr_nin" class="java.lang.String"/>
+	<parameter name="instr_type" class="java.lang.String"/>
+	<parameter name="qty" class="java.lang.String"/>
+	<parameter name="price" class="java.lang.String"/>
+	<parameter name="volume" class="java.lang.String"/>
+	<parameter name="client_sign" class="java.lang.String"/>
+	<parameter name="broker_sign" class="java.lang.String"/>
+	<parameter name="expired" class="java.lang.String"/>
+	<field name="id" class="java.lang.String"/>
+	<field name="date_id" class="java.lang.String"/>
+	<field name="who_made_id" class="java.lang.String"/>
+	<field name="firma" class="java.lang.String"/>
+	<field name="gos_reg" class="java.lang.String"/>
+	<field name="account" class="java.lang.String"/>
+	<field name="cod" class="java.lang.String"/>
+	<field name="order_ty" class="java.lang.String"/>
+	<field name="aim_deal" class="java.lang.String"/>
+	<field name="poruchenie" class="java.lang.String"/>
+	<field name="emitent" class="java.lang.String"/>
+	<field name="nin" class="java.lang.String"/>
+	<field name="type_i" class="java.lang.String"/>
+	<field name="qty_i" class="java.lang.String"/>
+	<field name="price_i" class="java.lang.String"/>
+	<field name="volume_i" class="java.lang.String"/>
+	<field name="field-c" class="java.lang.String"/>
+	<field name="field-d" class="java.lang.String"/>
+	<field name="field-e" class="java.lang.String"/>
+	<field name="field-f" class="java.lang.String"/>
+	<field name="field1" class="java.lang.String"/>
+	<field name="brok_s" class="java.lang.String"/>
+	<field name="client_s" class="java.lang.String"/>
+	<field name="left_end" class="java.lang.String"/>
+	<field name="right_end" class="java.lang.String"/>
+	<field name="exp" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d6c15829-0713-4b3f-a03e-51c580bfddf4" style="bold" x="184" y="4" width="171" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Клиентский заказ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="49" splitType="Stretch">
+			<textField>
+				<reportElement uuid="5516aecb-aa60-4f05-b642-1b79eb892c6f" style="normal" x="68" y="2" width="404" height="43"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["на совершение сделки "+$P{direction}+" ЦБ \n"+
+"на торговой площадке АО «Казахстанская фондовая биржа» \n"+
+"№ _________ от "+$P{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="200" splitType="Stretch">
+			<textField>
+				<reportElement uuid="75dadb06-18cf-42b4-bafb-5370a6a294dd" style="normal" x="0" y="0" width="555" height="20"/>
+				<textElement verticalAlignment="Top" markup="none">
+					<font fontName="Arial" size="11" pdfEncoding="Cp1251"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Фио Клиента: "+$P{fio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9b6629e6-2caa-4c05-8396-e9a8450bf7c8" style="normal" x="0" y="20" width="555" height="20"/>
+				<textElement verticalAlignment="Top" markup="none">
+					<font fontName="Arial" size="11" pdfEncoding="Cp1251"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Номер уд. личности: "+$P{id_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3529f5c3-f3ce-431f-8c32-40d3d35e3340" style="normal" x="0" y="40" width="555" height="20"/>
+				<textElement verticalAlignment="Top" markup="none">
+					<font fontName="Arial" size="11" pdfEncoding="Cp1251"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Дата выдачи: "+$P{id_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9373e0a6-5f11-4990-aff6-10fb343a3336" style="normal" x="0" y="60" width="555" height="20"/>
+				<textElement verticalAlignment="Top" markup="none">
+					<font fontName="Arial" size="11" pdfEncoding="Cp1251"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Кем выдано: "+$P{id_made_by_who}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9c7571e3-e425-41cc-b021-01317adcfc1d" x="0" y="80" width="555" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+					<font fontName="Arial" size="11" pdfEncoding="Cp1251"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Наименование организации: "+$P{firm_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f605c4c0-1e7e-4d5a-b414-299d8cb3c8c3" x="0" y="100" width="555" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+					<font fontName="Arial" size="11" pdfEncoding="Cp1251"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Свидетельство гос. регистрации: "+$P{gost_registration}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d2c5d424-9a02-400d-8571-311e15757492" x="0" y="120" width="555" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+					<font fontName="Arial" size="11" pdfEncoding="Cp1251"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Лицевой счет: "+$P{account}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="60bdf326-2075-4735-a768-1ee6b9f37fa3" x="0" y="140" width="555" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+					<font fontName="Arial" size="11" pdfEncoding="Cp1251"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Код клиента в торговой системе: "+$P{nick_ts}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="072de326-ffc4-4098-9cdf-f6ce225b0ad9" x="0" y="160" width="555" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+					<font fontName="Arial" size="11" pdfEncoding="Cp1251"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Тип заказа: "+$P{order_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="49bd1e1b-6fac-4b97-8770-35fe00300702" x="0" y="180" width="555" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+					<font fontName="Arial" size="11" pdfEncoding="Cp1251"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Цель сделки: "+$P{direction_2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="175" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="0d69231a-bccb-4ca4-8850-c2a4be7d7b34" x="0" y="0" width="555" height="20"/>
+				<textElement markup="none">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<text><![CDATA[b) Клиент поручает, а Брокер обязуется  заключить сделку с указанными ниже ценными бумагами:]]></text>
+			</staticText>
+			<elementGroup>
+				<rectangle>
+					<reportElement uuid="35645ef1-73c4-40ea-a6d8-5103ba7b86fe" mode="Opaque" x="15" y="23" width="513" height="138" isPrintInFirstWholeBand="true"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Solid"/>
+					</graphicElement>
+				</rectangle>
+				<line>
+					<reportElement uuid="062665a7-f1c1-4cbb-8e61-0407f2e7f590" x="15" y="44" width="513" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.0"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="b5352c1b-ded5-4137-b920-3ab5c8a59bb8" x="15" y="67" width="513" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.0"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="2fec4435-1145-4cda-897f-88ae4da91efc" x="15" y="88" width="513" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.0"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="20732e47-b025-449e-8f1a-515769372636" x="15" y="112" width="513" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.0"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="98908c3a-92b0-4bb0-9f57-cb9bb95a1743" x="15" y="135" width="513" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.0"/>
+					</graphicElement>
+				</line>
+			</elementGroup>
+			<line>
+				<reportElement uuid="7bd55ebc-efb8-401d-8084-2f8e8216fe5f" x="145" y="23" width="1" height="138"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="ffba41b5-f9ef-4114-b26a-11e3a08cf1eb" x="19" y="23" width="126" height="21"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Эмитент:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="96e65c26-9a95-4c51-8b90-e1d82b13573f" x="19" y="45" width="126" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["НИН Ценной бумаги:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3b8ca8cc-91dd-434f-a5ed-e66c8d45e219" x="19" y="67" width="126" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Вид Ценной бумаги:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="345953d2-a8a2-458d-9953-a2311dce6cb7" x="19" y="89" width="126" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Количество:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2d33bd32-f929-41ff-8aaf-d21b1a473257" x="19" y="113" width="126" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Цена:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="32205b28-67a6-4280-9514-30ae61fc90ee" x="19" y="137" width="126" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Объем сделки:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3ae692c8-63e6-4da9-ac10-148ec9ffdafe" x="145" y="25" width="383" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$P{emitent}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="89a46465-0389-4214-8dde-81002d4be634" x="146" y="48" width="381" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$P{instr_nin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f15694b3-791e-468f-b511-29c4bd8f324e" x="146" y="67" width="382" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$P{instr_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d2d0f186-a8f9-4b68-ba24-ea3db07e441b" x="145" y="93" width="383" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$P{qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a79ec0e1-77aa-40f5-93b1-36b9b827474f" x="146" y="113" width="382" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$P{price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5cfaaee1-e654-4f9b-af86-34ec0b865bc0" x="145" y="137" width="382" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$P{volume}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="313" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="cd5bffea-adb3-45bb-9d28-c1187efa733b" x="0" y="0" width="555" height="44"/>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<text><![CDATA[c) За исполнение данного заказа Клиент выплачивает Брокеру вознаграждение в соответствии с тарифами Брокера. Клиент также возмещает Брокеру фактические издержки, понесенные им в результате исполнения настоящего клиентского заказа. Расчеты Клиента с Брокером производятся на основании предоставленного Отчета Брокера. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9bab9901-9231-4394-948f-6e478eeff16f" x="0" y="44" width="555" height="20"/>
+				<textElement textAlignment="Left" markup="none">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<text><![CDATA[d) Срок действия заказа: до окончания торговой сессии __________________. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="66e4aa17-6e91-473d-ad01-fc99429897ee" x="0" y="63" width="555" height="36"/>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<text><![CDATA[e) Сроком исполнения Клиентского заказа считается срок с момента приема Клиентского заказа до момента заключения соответствующей сделки. Срок фактического исполнения сделки определяется практикой рынка.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="615c31ed-6f5c-40b2-93ba-1a6d926d0413" x="0" y="98" width="555" height="29"/>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<text><![CDATA[f) Порядок исполнения заказа, а также права и обязанности сторон определены в Договоре, приложением к которому является настоящий заказ. ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="59062f16-0667-4319-a837-5177b4e01ba4" x="20" y="129" width="194" height="47"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Брокер:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="22f877ab-756a-4c0f-a9aa-e49c7e947bbb" x="227" y="129" width="328" height="47"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Клиент: \n"+$P{client_sign}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="d9e87406-daab-4e78-9802-49a0f6dd678c" x="28" y="181" width="494" height="123"/>
+			</rectangle>
+			<line>
+				<reportElement uuid="b78e1bb9-e8f5-43c1-878c-8d3f9de276af" x="284" y="181" width="1" height="123"/>
+			</line>
+			<staticText>
+				<reportElement uuid="96e5e2a5-d1a2-4aa5-9e9c-11ecb3d8dc06" x="30" y="182" width="254" height="123"/>
+				<textElement textAlignment="Left" markup="none">
+					<font fontName="Arial" size="10"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Регистрационный номер заказа № ____________
+Дата принятия заказа
+Время	принятия заказа ______________
+Клиентский заказ принял:
+Ф.И.О._____________________________________
+Должность _________________________________
+Подпись ___________________________________
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="81731cd9-31e9-4efa-a77f-2d64533a0f9d" x="291" y="182" width="236" height="123"/>
+				<textElement verticalAlignment="Top" markup="none">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<text><![CDATA[Рекомендации брокера о совершении сделки:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="60996041-a1f0-45a7-b5d3-ab54b76f0607" x="267" y="43" width="108" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$P{expired}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9b5ba257-8365-44d2-8ad8-814f615aa3cf" x="145" y="202" width="138" height="18"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$P{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>

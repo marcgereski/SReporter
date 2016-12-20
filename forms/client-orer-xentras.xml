@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+
+<jasperReport name="ClientOrderCentras">
+    <style name="centeredText" hAlign="Center" vAlign="Middle"/>
+    <style name="normal" isDefault="true" vAlign="Middle" fontName="Arial" fontSize="11" pdfEncoding="Cp1251"
+           isBold="false" pdfFontName="xmls/fonts/arial.ttf" isPdfEmbedded="true"/>
+    <style name="bold" isDefault="false" pdfFontName="xmls/fonts/arialbd.ttf" fontSize="12" pdfEncoding="Cp1251"
+           isPdfEmbedded="true"/>
+    <style name="italic" isDefault="false" pdfFontName="xmls/fonts/ariali.ttf" fontSize="12" pdfEncoding="Cp1251"
+           isPdfEmbedded="true"/>
+    <style name="middle-bold" isDefault="false" pdfFontName="xmls/fonts/arialbd.ttf" fontSize="14" pdfEncoding="Cp1251"
+           isPdfEmbedded="true"/>
+    <style name="centered" style="centeredText" isDefault="true" vAlign="Middle" fontName="Arial" fontSize="12"
+           pdfEncoding="Cp1251"
+           isBold="false" pdfFontName="xmls/fonts/arial.ttf" isPdfEmbedded="true"/>
+    <parameter name="day" class="java.lang.String"/>
+    <parameter name="month" class="java.lang.String"/>
+    <parameter name="year" class="java.lang.String"/>
+    <parameter name="direction" class="java.lang.String"/>
+    <parameter name="fio" class="java.lang.String"/>
+    <parameter name="id_number" class="java.lang.String"/>
+    <parameter name="id_made" class="java.lang.String"/>
+    <parameter name="id_made_by_who" class="java.lang.String"/>
+    <parameter name="firm_name" class="java.lang.String"/>
+    <parameter name="gos_registr" class="java.lang.String"/>
+    <parameter name="account" class="java.lang.String"/>
+    <parameter name="nick_ts" class="java.lang.String"/>
+    <parameter name="order_type" class="java.lang.String"/>
+    <parameter name="direction_2" class="java.lang.String"/>
+    <parameter name="emitent" class="java.lang.String"/>
+    <parameter name="instr_nin" class="java.lang.String"/>
+    <parameter name="instr_type" class="java.lang.String"/>
+    <parameter name="qty" class="java.lang.String"/>
+    <parameter name="price" class="java.lang.String"/>
+    <parameter name="volume" class="java.lang.String"/>
+    <parameter name="client_sign" class="java.lang.String"/>
+    <parameter name="broker_sign" class="java.lang.String"/>
+
+
+    <pageHeader>
+        <band height="100">
+            <textField>
+                <reportElement style="bold" x="0" y="10" height="80" width="500"/>
+                <textElement lineSpacing="Single" textAlignment="Center"/>
+                <textFieldExpression>
+                    <![CDATA["Клиентский заказ"]]>
+                </textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="normal" x="0" y="10" height="80" width="500"/>
+                <textElement lineSpacing="Single" textAlignment="Center"/>
+                <textFieldExpression>
+                    <![CDATA["На совершение сделки "+$P{direction}+" ЦБ \n на торговой площадке АО «Казахстанская фондовая биржа» \n №__________ от '"+$P{day}+"' "+$P{month}+" "+$P{year}+" г."]]>
+                </textFieldExpression>
+            </textField>
+        </band>
+    </pageHeader>
+    <detail>
+        <band height="250">
+            <textField>
+                <reportElement style="normal" x="0" y="0" height="150" width="500"/>
+                <textElement lineSpacing="Single" textAlignment="Left"/>
+                <textFieldExpression>
+                    <![CDATA["Фио клиента: "+$P{fio}+"\n"+
+                    "Номер уд. личности: "+$P{id_number}+"\n"+
+                    "Дата выдачи: "+$P{id_made}+"\n"+
+                    "Кем выдано: "+$P{id_made_by_who}+"\n"+
+                    "Наименование организации: "+$P{firm_name}+"\n"+
+                    "Свидетельство гос. регистрации: "+$P{gos_registr}+"\n"+
+                    "Лицевой счет: "+$P{account}+"\n"+
+                    "Код клиента в торговой системе: "+$P{nick_ts}+"\n"+
+                    "Тип заказа: "+$P{order_type}+"\n"+
+                    "Цель сделки: "+$P{direction_2}+"\n"]]>
+                </textFieldExpression>
+            </textField>
+
+            <crosstab>
+                <reportElement width="500" x="0" y="0" height="20"/>
+                <rowGroup name="parametrs" width="100">
+                    <!--<bucket>-->
+                        <!--<bucketExpression class="java.lang.String">-->
+                            <!--<![CDATA["Эмитент:"]]>-->
+                        <!--</bucketExpression>-->
+
+                        <!--<bucketExpression class="java.lang.String">-->
+                            <!--<![CDATA[НИН ценной бумаги:"]]>-->
+                        <!--</bucketExpression>-->
+
+                        <!--<bucketExpression class="java.lang.String">-->
+                            <!--<![CDATA["Вид ценной бумаги:"]]>-->
+                        <!--</bucketExpression>-->
+
+                        <!--<bucketExpression class="java.lang.String">-->
+                            <!--<![CDATA["Количество:"]]>-->
+                        <!--</bucketExpression>-->
+
+                        <!--<bucketExpression class="java.lang.String">-->
+                            <!--<![CDATA["Цена:"]]>-->
+                        <!--</bucketExpression>-->
+                        <!--<bucketExpression class="java.lang.String">-->
+                            <!--<![CDATA["Объем сделки:"]]>-->
+                        <!--</bucketExpression>-->
+                    <!--</bucket>-->
+                </rowGroup>
+            </crosstab>
+        </band>
+
+    </detail>
+
+
+</jasperReport>
