@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="Oracle - world@192.168.111.2" uuid="d08448fc-07ad-401b-b5da-828d6945d803">
-    <database-info product="Oracle" version="Oracle Database 10g Enterprise Edition Release 10.2.0.4.0 - Production&#xa;With the Partitioning, OLAP, Data Mining and Real Application Testing options" jdbc-version="11.2" driver-name="Oracle JDBC driver" driver-version="11.2.0.3.0">
-      <extra-name-characters>$#</extra-name-characters>
-      <identifier-quote-string>&quot;</identifier-quote-string>
-    </database-info>
-    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
     <database-model serializer="dbm" rdbms="ORACLE" format-version="2.5">
-      <schema id="1" name="ARCTS_STRADE"/>
-      <schema id="2" name="STRADE">
-        <object-id>115</object-id>
-        <introspection-timestamp>2016-12-12.16:32:26</introspection-timestamp>
+      <schema id="1" name="STRADE"/>
+      <schema id="2" name="ARCTS_STRADE">
+        <object-id>106</object-id>
+        <introspection-timestamp>2016-12-27.16:38:49</introspection-timestamp>
       </schema>
     </database-model>
   </data-source>

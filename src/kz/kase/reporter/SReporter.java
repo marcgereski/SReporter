@@ -78,7 +78,8 @@ public class SReporter {
             JRPdfExporter pdfExporter = new JRPdfExporter();
 
             pdfExporter.setParameter(JRExporterParameter.JASPER_PRINT, jasperPrint);
-            String fileName = APP_DIR + SEP + REPORTS + SEP + OUT_FILE + SEP + params.get(INTERNAL_NUMBER) + "_" + OUT_FILE + "_" + dateToFile + ".pdf";
+            String fileName = APP_DIR + SEP + REPORTS + SEP + OUT_FILE + SEP + params.get(INTERNAL_NUMBER) + "_" + OUT_FILE + "_"
+                    + params.getOrDefault(ACCEPT_DATE, dateToFile) + "_" + params.get(ACCEPT_TIME).toString().replaceAll(":", ".") + ".pdf";
             File reportFile = new File(fileName);
 
             File reportsDir = new File(APP_DIR + SEP + REPORTS);
